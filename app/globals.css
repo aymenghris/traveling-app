@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @theme {
     /* Colors */
@@ -24,42 +23,58 @@
     --bg-pattern-2: url('/public/pattern-bg.png');
 
     /* Screen sizes */
-    --screen-xs: 400px;
-    --screen-3xl: 1680px;
-    --screen-4xl: 2200px;
+    --breakpoint-xs: 400px;
+    --breakpoint-3xl: 1680px;
+    --breakpoint-4xl: 2200px;
 
     /* Max width */
     --max-width-10xl: 1512px;
 
     /* Border radius */
-    --border-radius-5xl: 40px;
+    --radius-5xl: 40px;
+
+    /* Font sizes */
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-size-24: 24px;
+    --font-size-32: 32px;
+    --font-size-40: 40px;
+    --font-size-52: 52px;
+    --font-size-64: 64px;
+    --font-size-88: 88px;
 }
 
-@utility {
-    .c-bg-img-1 {
-        background-image: var(--bg-img-1);
-    }
+@utility c-regular-* {
+    /* For size 40 and 64 manually add leading-[120%] */
+    font-weight: 400;
+    font-size: --value(--font-size-*);
+}
 
-    .c-bg-img-2 {
-        background-image: var(--bg-img-2);
-    }
+@utility c-meduim-* {
+    font-weight: 600;
+    font-size: --value(--font-size-*);
+}
 
-    .c-feature-bg {
-        background-image: var(--bg-feature-bg);
-    }
+@utility c-bold-* {
+    /* Form size 32 to 88 manually add leading-[120%] */
+    font-weight: 700;
+    font-size: --value(--font-size-*);
+}
 
-    .c-pattern {
-        background-image: var(--bg-pattern);
-    }
+@utility c-bg-* {
+    background-image: --value(--bg-*);
+}
 
-    .c-pattern-2 {
-        background-image: var(--bg-pattern-2);
-    }
+@utility c-max-container {
+    @apply mx-auto max-w-[1440px];
 }
 
 .c-btn-white {
     @apply border-white bg-white px-8 py-3 text-green-50
 }
+
 
 .c-btn-white-text {
     @apply border-white bg-white px-8 py-3 text-gray-90
@@ -77,9 +92,6 @@
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white
 }
 
-.c-max-container {
-    @apply mx-auto max-w-[1440px];
-}
 
 .c-padding-container {
     @apply px-6 lg:px-20 3xl:px-0;
@@ -101,91 +113,19 @@
     @apply flex items-center justify-end;
 }
 
-/* FONTS */
-.c-regular-64 {
-    @apply text-[64px] font-[400] leading-[120%];
-}
-
-.c-regular-40 {
-    @apply text-[40px] font-[400] leading-[120%];
-}
-
-.c-regular-32 {
-    @apply text-[32px] font-[400];
-}
-
-.c-regular-24 {
-    @apply text-[24px] font-[400];
-}
-
-.c-regular-20 {
-    @apply text-[20px] font-[400];
-}
-
-.c-regular-18 {
-    @apply text-[18px] font-[400];
-}
-
-.c-regular-16 {
-    @apply text-[16px] font-[400];
-}
-
-.c-regular-14 {
-    @apply text-[14px] font-[400];
-}
-
-.c-medium-14 {
-    @apply text-[14px] font-[600];
-}
-
-.c-bold-88 {
-    @apply text-[88px] font-[700] leading-[120%];
-}
-
-.c-bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
-}
-
-.c-bold-52 {
-    @apply text-[52px] font-[700] leading-[120%];
-}
-
-.c-bold-40 {
-    @apply text-[40px] font-[700] leading-[120%];
-}
-
-.c-bold-32 {
-    @apply text-[32px] font-[700] leading-[120%];
-}
-
-.c-bold-20 {
-    @apply text-[20px] font-[700];
-}
-
-.c-bold-18 {
-    @apply text-[18px] font-[700];
-}
-
-.c-bold-16 {
-    @apply text-[16px] font-[700];
-}
-
-/* Hero */
 .c-hero-map {
-    @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60;
+    @apply c-bg-pattern-2 absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60;
 }
 
-/* Camp */
+
 .c-camp-quote {
     @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
 }
 
-/* Feature */
 .c-feature-phone {
     @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
 }
 
-/* Get App */
 .c-get-app {
-    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply c-max-container c-bg-pattern relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
 }
