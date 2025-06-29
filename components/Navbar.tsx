@@ -8,7 +8,12 @@ export const Navbar = () => (
     <div>
         <nav className="c-flex-between c-max-container c-padding-container relative z-30 py-5">
             <Link href="/">
-                <Image src={IMAGES.logo} alt="logo" width={250} height={29} />
+                <Image
+                    src={IMAGES.shared.logo}
+                    alt="logo"
+                    width={250}
+                    height={29}
+                />
             </Link>
             <ul className="hidden h-full gap-12 lg:flex">
                 {NAV_LINKS.map((link) => (
@@ -25,12 +30,12 @@ export const Navbar = () => (
                 <Button
                     type="submit"
                     title="login"
-                    icon={IMAGES.user}
+                    icon={IMAGES.navbar.user}
                     variant="c-btn-dark-green"
                 />
             </div>
             <Image
-                src={IMAGES.menu}
+                src={IMAGES.navbar.menu}
                 alt="menu"
                 width={32}
                 height={32}
