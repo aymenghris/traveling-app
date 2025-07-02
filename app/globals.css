@@ -15,13 +15,6 @@
     --color-blue-70: #021639;
     --color-yellow-50: #FEC601;
 
-    /* Background Images */
-    --bg-img-1: url('/public/img-1.png');
-    --bg-img-2: url('/public/img-2.png');
-    --bg-feature-bg: url('/public/feature-bg.png');
-    --bg-pattern: url('/public/pattern.png');
-    --bg-pattern-2: url('/public/pattern-bg.png');
-
     /* Screen sizes */
     --breakpoint-xs: 400px;
     --breakpoint-3xl: 1680px;
@@ -32,6 +25,19 @@
 
     /* Border radius */
     --radius-5xl: 40px;
+
+    /* Flex Box */
+    --flex-between: space-between;
+    --flex-center: center;
+    --flex-start: flex-start;
+    --flex-end: flex-end;
+
+    /* Background Images */
+    --bg-img-campfire: url('/camp/campfire.jpg');
+    --bg-img-tent: url('/camp/tent.jpg');
+    --bg-pattren-white: url('/features/pattern-white.png');
+    --bg-pattern-green: url('/get-app/pattern-green.png');
+    --bg-pattern-destination: url('/hero/pattern-destination.png');
 
     /* Font sizes */
     --font-size-14: 14px;
@@ -46,13 +52,20 @@
     --font-size-88: 88px;
 }
 
+
+@utility c-flex-* {
+    display: flex;
+    align-items: center;
+    justify-content: --value(--flex-*);
+}
+
 @utility c-regular-* {
     /* For size 40 and 64 manually add leading-[120%] */
     font-weight: 400;
     font-size: --value(--font-size-*);
 }
 
-@utility c-meduim-* {
+@utility c-medium-* {
     font-weight: 600;
     font-size: --value(--font-size-*);
 }
@@ -71,17 +84,16 @@
     @apply mx-auto max-w-[1440px];
 }
 
-.c-btn-white {
-    @apply border-white bg-white px-8 py-3 text-green-50
+@utility c-padding-container {
+    @apply px-6 lg:px-20 3xl:px-0;
 }
 
-
-.c-btn-white-text {
-    @apply border-white bg-white px-8 py-3 text-gray-90
-}
-
-.c-btn-green {
-    @apply border-green-50 bg-green-50 px-8 py-5 text-white
+@utility scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
 }
 
 .c-btn-dark-green {
@@ -92,40 +104,14 @@
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white
 }
 
-
-.c-padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+.c-btn-green {
+    @apply border-green-50 bg-green-50 px-8 py-5 text-white
 }
 
-.c-flex-center {
-    @apply flex items-center justify-center;
+.c-btn-white {
+    @apply border-white bg-white px-8 py-3 text-green-50
 }
 
-.c-flex-between {
-    @apply flex items-center justify-between;
-}
-
-.c-flex-start {
-    @apply flex items-center justify-start;
-}
-
-.c-flex-end {
-    @apply flex items-center justify-end;
-}
-
-.c-hero-map {
-    @apply c-bg-pattern-2 absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60;
-}
-
-
-.c-camp-quote {
-    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
-}
-
-.c-feature-phone {
-    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
-}
-
-.c-get-app {
-    @apply c-max-container c-bg-pattern relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+.c-btn-white-text {
+    @apply border-white bg-white px-8 py-3 text-gray-90
 }
