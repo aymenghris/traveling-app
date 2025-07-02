@@ -17,7 +17,7 @@ export const Hero = () => {
 
             <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
                 <Image
-                    src="/camp.svg"
+                    src={IMAGES.shared.camp}
                     alt="camp"
                     width={50}
                     height={50}
@@ -63,7 +63,7 @@ export const Hero = () => {
                     <Button
                         type="button"
                         title="How we work?"
-                        icon="/play.svg"
+                        icon={IMAGES.hero.play}
                         variant="c-btn-white-text"
                     />
                 </div>
@@ -79,7 +79,7 @@ const HeroMap = () => {
         <div
             className={clsx(
                 'absolute top-0 right-0 h-screen w-screen',
-                'c-bg-pattern-2 bg-cover bg-center',
+                'c-bg-pattern-destination bg-cover bg-center',
                 'md:-right-28 xl:-top-60'
             )}
         />
@@ -99,7 +99,7 @@ const LocationInfoCard = () => (
                 <div className="c-flex-between">
                     <p className="c-regular-16 text-gray-20">Location</p>
                     <Image
-                        src="/close.svg"
+                        src={IMAGES.hero.close}
                         alt="close"
                         width={24}
                         height={24}
