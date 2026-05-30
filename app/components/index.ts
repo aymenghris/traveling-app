@@ -1,4 +1,5 @@
 export * from "./camp"
 export * from "./features"
+export * from "./get-app"
 export * from "./guide"
 export * from "./hero"
