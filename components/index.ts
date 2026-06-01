@@ -1,7 +1,0 @@
-export * from './Navbar'
-export * from './Footer'
-export * from './Hero'
-export * from './camp/Camp'
-export * from './Guide'
-export * from './Features'
-export * from './GetApp'

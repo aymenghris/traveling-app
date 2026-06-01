@@ -1,19 +1,17 @@
-import { FC, ReactNode } from 'react'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Footer, Navbar } from '@/components'
-import './globals.css'
+import type { Metadata } from "next"
+import { Geist } from "next/font/google"
+import type { FC, ReactNode } from "react"
+import { Footer, Navbar } from "@/app/components"
+import "./globals.css"
+import { cn } from "@/lib/utils"
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
-    title: 'Quest Quill',
+    title: "Quest Quill",
     description:
-        'Camping app simplifies outdoor trips with campsite locators, booking, trail maps, gear checklists, and offline access.',
+        "Camping app simplifies outdoor trips with campsite locators, booking, trail maps, gear checklists, and offline access.",
 }
-
-const inter = Inter({
-    subsets: ['latin'],
-    display: 'swap',
-})
 
 interface RootLayoutProps {
     children: ReactNode
@@ -21,7 +19,7 @@ interface RootLayoutProps {
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
     return (
-        <html lang="en" className={inter.className}>
+        <html lang="en" className={cn("font-sans", geist.variable)}>
             <body>
                 <Navbar />
                 <main className="relative overflow-hidden">{children}</main>
