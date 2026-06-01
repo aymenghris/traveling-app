@@ -13,7 +13,7 @@ export const MobileMenuDropdown = () => {
 
             <SheetContent
                 side="right"
-                className="w-[280px] border-none bg-white text-gray-90"
+                className="w-[280px] border-none bg-white text-gray-900"
             >
                 <div className="flex h-full flex-col">
                     <MobileMenuHeader />

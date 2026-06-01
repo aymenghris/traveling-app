@@ -1,15 +1,13 @@
-import Button from "@/components/Button"
-import { IMAGES } from "@/constants"
+import { User2Icon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export const MobileMenuLogin = () => {
     return (
         <div className="pt-8">
-            <Button
-                type="button"
-                title="login"
-                icon={IMAGES.navbar.user}
-                variant="c-btn-dark-green"
-            />
+            <Button variant="dark-green" size="md">
+                <User2Icon className="size-5" />
+                login
+            </Button>
         </div>
     )
 }

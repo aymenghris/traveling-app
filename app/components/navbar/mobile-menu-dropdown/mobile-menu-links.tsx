@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { SheetClose } from "@/components/ui/sheet"
-import { NAV_LINKS } from "@/constants"
+import { NAV_LINKS } from "@/constants/nav-links"
 
 export const MobileMenuLinks = () => {
     return (
@@ -10,7 +10,7 @@ export const MobileMenuLinks = () => {
                     <SheetClose asChild>
                         <Link
                             href={link.href}
-                            className="c-regular-16 block text-gray-80 transition-all hover:font-bold hover:text-green-60"
+                            className="text-base text-gray-80 transition-all hover:font-bold hover:text-green-60"
                         >
                             {link.label}
                         </Link>
