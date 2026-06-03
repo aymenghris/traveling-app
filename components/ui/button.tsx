@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils"
 const buttonVariants = cva(
     cn(
         "group/button inline-flex shrink-0 select-none items-center justify-center",
-        "whitespace-nowrap font-medium text-sm capitalize",
-        "rounded-lg border border-transparent bg-clip-padding outline-none",
+        "whitespace-nowrap font-bold text-base",
+        "cursor-pointer rounded-lg border border-transparent bg-clip-padding outline-none",
         "transition-all",
         "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
         "active:not-aria-[haspopup]:translate-y-px",
@@ -31,11 +31,11 @@ const buttonVariants = cva(
                 destructive:
                     "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:focus-visible:ring-destructive/40 dark:hover:bg-destructive/30",
                 link: "text-primary underline-offset-4 hover:underline",
-                "dark-green": cn(
-                    "bg-green-90",
-                    "font-bold text-base text-white",
-                    "hover:bg-black",
-                ),
+
+                white: "border-white bg-white text-neutral-950/96",
+                "white-green": "border-white bg-white text-green-600/87",
+                green: "border-green-600/87 bg-green-600/87 text-white",
+                "dark-green": "bg-olive-800 text-white hover:bg-black",
             },
             size: {
                 default:
@@ -64,10 +64,12 @@ function Button({
     variant = "default",
     size = "default",
     asChild = false,
+    capitalize = true,
     ...props
 }: React.ComponentProps<"button"> &
     VariantProps<typeof buttonVariants> & {
         asChild?: boolean
+        capitalize?: boolean
     }) {
     const Comp = asChild ? Slot.Root : "button"
 
@@ -76,7 +78,10 @@ function Button({
             data-slot="button"
             data-variant={variant}
             data-size={size}
-            className={cn(buttonVariants({ variant, size, className }))}
+            className={cn(
+                buttonVariants({ variant, size, className }),
+                capitalize && "capitalize",
+            )}
             {...props}
         />
     )
