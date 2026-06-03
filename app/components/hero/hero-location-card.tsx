@@ -1,42 +1,40 @@
-import clsx from "clsx"
-import Image from "next/image"
-import { IMAGES } from "@/constants"
+import { XIcon } from "lucide-react"
+import { cn } from "@/lib/utils"
 
-const locationDetails = [
-    { label: "Distance", value: "133.58 mi" },
-    { label: "Elevation", value: "1.540 km" },
+const LOCATION_DETAILS = [
+    { label: "distance", value: "133.58 mi" },
+    { label: "elevation", value: "1.540 km" },
 ]
 
 export const HeroLocationCard = () => {
     return (
         <div className="relative flex flex-1 items-start">
             <div
-                className={clsx(
-                    "relative z-20 w-[268px]",
+                className={cn(
+                    "relative z-20 w-67",
                     "flex flex-col gap-8",
-                    "rounded-3xl bg-green-90 px-7 py-8",
+                    "rounded-3xl bg-olive-800 px-7 py-8",
                 )}
             >
                 <div className="flex flex-col">
-                    <div className="c-flex-between">
-                        <p className="c-regular-16 text-gray-20">Location</p>
-                        <Image
-                            src={IMAGES.hero.close}
-                            alt="close"
-                            width={24}
-                            height={24}
-                        />
+                    <div className="flex items-center justify-between">
+                        <p className="text-neutral-400 capitalize">location</p>
+                        <XIcon className="size-6 stroke-[1.5px] text-white" />
                     </div>
-                    <p className="c-bold-20 text-white">Plumas County</p>
+                    <p className="font-bold text-white text-xl capitalize">
+                        plumas county
+                    </p>
                 </div>
 
-                <div className="c-flex-between">
-                    {locationDetails.map((item) => (
+                <div className="flex items-center justify-between">
+                    {LOCATION_DETAILS.map((item) => (
                         <div key={item.label} className="flex flex-col">
-                            <p className="c-regular-16 text-gray-20 block">
+                            <p className="text-neutral-400 capitalize">
                                 {item.label}
                             </p>
-                            <p className="c-bold-20 text-white">{item.value}</p>
+                            <p className="font-bold text-white text-xl">
+                                {item.value}
+                            </p>
                         </div>
                     ))}
                 </div>

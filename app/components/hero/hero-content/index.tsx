@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { IMAGES } from "@/constants"
+import { cn } from "@/lib/utils"
 import { HeroActions } from "./hero-actions"
 import { HeroFeedback } from "./hero-feedback"
 
@@ -11,14 +12,19 @@ export const HeroContent = () => {
                 alt="camp"
                 width={50}
                 height={50}
-                className="absolute top-[-30px] left-[-5px] w-10 lg:w-[50px]"
+                className="absolute -top-7.5 -left-1.25 w-10 lg:w-12.5"
             />
 
-            <h1 className="c-bold-52 lg:c-bold-88 lg:leading-[120%]">
-                Last Chance Creek
+            <h1
+                className={cn(
+                    "font-bold text-[52px] capitalize",
+                    "lg:text-[88px] lg:leading-[120%]",
+                )}
+            >
+                last chance creek
             </h1>
 
-            <p className="c-regular-16 text-gray-30 mt-6 xl:max-w-[520px]">
+            <p className="mt-6 text-neutral-500/94 xl:max-w-130">
                 We&apos;re here for every step of your journey to experience
                 nature&apos;s untouched beauty. Start exploring the world—all in
                 one simple app.
