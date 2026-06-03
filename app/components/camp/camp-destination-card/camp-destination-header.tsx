@@ -11,14 +11,14 @@ export const CampDestinationHeader = ({
     location,
 }: CampDestinationHeaderProps) => {
     return (
-        <div className="c-flex-center gap-4">
-            <div className="rounded-full bg-green-50 p-4">
-                <Image src={IMAGES.camp.map} alt="" width={28} height={28} />
+        <div className="flex items-center justify-center gap-4">
+            <div className="rounded-full bg-green-600/87 p-4">
+                <Image src={IMAGES.camp.map} alt="map" width={28} height={28} />
             </div>
 
             <div className="flex flex-col gap-1">
-                <h4 className="c-bold-18 text-white">{campName}</h4>
-                <p className="c-regular-14 text-white">{location}</p>
+                <h4 className="font-bold text-lg text-white">{campName}</h4>
+                <p className="text-sm text-white">{location}</p>
             </div>
         </div>
     )

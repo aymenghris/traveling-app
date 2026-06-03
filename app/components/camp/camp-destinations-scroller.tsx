@@ -1,14 +1,14 @@
-import clsx from "clsx"
-import { CAMP_DESTINATIONS } from "@/constants/camp-destination"
+import { CAMP_DESTINATIONS } from "@/constants/camp"
+import { cn } from "@/lib/utils"
 import { CampDestinationCard } from "./camp-destination-card"
 
 export const CampDestinationsScroller = () => {
     return (
         <div
-            className={clsx(
+            className={cn(
                 "flex items-start justify-start gap-8",
-                "h-[340px] w-full",
-                "lg:h-[480px] xl:h-[640px]",
+                "h-85 w-full",
+                "lg:h-120 xl:h-160",
                 "scrollbar-hidden overflow-x-auto",
             )}
         >

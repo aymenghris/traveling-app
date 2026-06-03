@@ -14,3 +14,9 @@ export const CAMP_DESTINATIONS = [
         joinedLabel: "50+ Joined",
     },
 ] satisfies ReadonlyArray<CampDestination>
+
+export const PEOPLE_IMAGES = [
+    "/camp/people/person-1.png",
+    "/camp/people/person-2.png",
+    "/camp/people/person-3.png",
+]

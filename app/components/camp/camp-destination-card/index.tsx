@@ -1,4 +1,4 @@
-import clsx from "clsx"
+import { cn } from "@/lib/utils"
 import type { CampDestination } from "@/types/camp"
 import { CampDestinationHeader } from "./camp-destination-header"
 import { CampDestinationPeople } from "./camp-destination-people"
@@ -11,8 +11,8 @@ export const CampDestinationCard = ({
 }: CampDestination) => {
     return (
         <div
-            className={clsx(
-                "size-full min-w-[1100px]",
+            className={cn(
+                "size-full min-w-275",
                 "bg-cover bg-no-repeat",
                 "lg:rounded-r-5xl 2xl:rounded-5xl",
                 backgroundImageClassName,

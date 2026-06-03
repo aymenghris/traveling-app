@@ -1,23 +1,28 @@
-import clsx from "clsx"
 import Image from "next/image"
 import { IMAGES } from "@/constants"
+import { cn } from "@/lib/utils"
 
 export const CampGuidanceCallout = () => {
     return (
-        <div className="c-flex-end mt-10 px-6 lg:-mt-60 lg:mr-6">
+        <div className="mt-10 flex items-center justify-end px-6 lg:-mt-60 lg:mr-6">
             <div
-                className={clsx(
+                className={cn(
                     "relative w-full p-8",
-                    "overflow-hidden rounded-3xl bg-green-50",
-                    "lg:max-w-[500px] xl:max-w-[734px]",
+                    "overflow-hidden rounded-3xl bg-green-600/87",
+                    "lg:max-w-125 xl:max-w-183.5",
                     "xl:rounded-5xl xl:px-16 xl:py-20",
                 )}
             >
-                <h2 className="c-regular-24 md:c-regular-32 2xl:c-regular-64 text-white capitalize 2xl:leading-[120%]">
-                    <strong>Lost</strong> And Unsure Where To Go Next?
+                <h2
+                    className={cn(
+                        "text-2xl text-white capitalize",
+                        "md:text-[32px] 2xl:text-[64px] 2xl:leading-[120%]",
+                    )}
+                >
+                    <strong>lost</strong> and unsure where to go next?
                 </h2>
 
-                <p className="c-regular-14 xl:c-regular-16 mt-5 text-white">
+                <p className="mt-5 text-white max-xl:text-sm">
                     It’s natural to feel anxious when climbing somewhere new—the
                     risk of losing your way is high. That’s exactly why we’re
                     here: to help you start your adventure safely.
@@ -25,12 +30,12 @@ export const CampGuidanceCallout = () => {
 
                 <Image
                     src={IMAGES.camp.quote}
-                    alt=""
+                    alt="quote"
                     width={186}
                     height={219}
-                    className={clsx(
-                        "absolute -right-6 bottom-4 w-[140px]",
-                        "3xl:right-0 lg:bottom-10 xl:-right-8 xl:w-[186px]",
+                    className={cn(
+                        "absolute -right-6 bottom-4 w-35",
+                        "3xl:right-0 lg:bottom-10 xl:-right-8 xl:w-46.5",
                     )}
                 />
             </div>

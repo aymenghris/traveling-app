@@ -1,4 +1,3 @@
-// IMAGES
 export const IMAGES = {
     camp: {
         quote: "/camp/quote.svg",
@@ -22,11 +21,3 @@ export const IMAGES = {
         camp: "/shared/camp.svg",
     },
 }
-
-// CAMP SECTION
-export const PEOPLE_URL = [
-    "/camp/person-1.png",
-    "/camp/person-2.png",
-    "/camp/person-3.png",
-    "/camp/person-4.png",
-]
