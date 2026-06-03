@@ -4,11 +4,6 @@ export const IMAGES = {
         quote: "/camp/quote.svg",
         map: "/camp/folded-map.svg",
     },
-    hero: {
-        close: "/hero/close.svg",
-        play: "/hero/play.svg",
-        star: "/hero/star.svg",
-    },
     getapp: {
         phones: "/get-app/phones.png",
         apple: "/get-app/apple.svg",
