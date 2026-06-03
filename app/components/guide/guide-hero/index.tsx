@@ -2,9 +2,15 @@ import Image from "next/image"
 import { IMAGES } from "@/constants"
 import { DestinationCard } from "./destination-card"
 
+const DESTINATION_DETAILS = {
+    destination: "birch isle",
+    startTrack: "minong flowage launch",
+    duration: "45 min",
+}
+
 export const GuideHero = () => {
     return (
-        <div className="c-flex-center c-max-container relative w-full">
+        <div className="relative mx-auto flex w-full max-w-360 items-center justify-center">
             <Image
                 src={IMAGES.guide.boats}
                 alt="boat"
@@ -13,11 +19,7 @@ export const GuideHero = () => {
                 className="w-full object-cover object-center 2xl:rounded-5xl"
             />
 
-            <DestinationCard
-                duration="45 min"
-                destination="Birch Isle"
-                startTrack="Minong Flowage Launch"
-            />
+            <DestinationCard {...DESTINATION_DETAILS} />
         </div>
     )
 }

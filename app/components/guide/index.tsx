@@ -3,7 +3,7 @@ import { GuideIntro } from "./guide-intro"
 
 export const Guide = () => {
     return (
-        <section className="c-flex-center flex-col">
+        <section className="flex flex-col items-center justify-center">
             <GuideIntro />
             <GuideHero />
         </section>

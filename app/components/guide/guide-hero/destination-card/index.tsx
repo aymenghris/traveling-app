@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { IMAGES } from "@/constants"
+import { cn } from "@/lib/utils"
 import { GuideInfoItem } from "./guide-info-item"
 
 type DestinationCardProps = {
@@ -14,7 +15,14 @@ export const DestinationCard = ({
     startTrack,
 }: DestinationCardProps) => {
     return (
-        <div className="absolute flex gap-3 rounded-3xl border bg-white py-8 pr-7 pl-5 shadow-md md:left-[5%] lg:top-20">
+        <div
+            className={cn(
+                "absolute py-8 pr-7 pl-5",
+                "flex gap-3",
+                "rounded-3xl border bg-white shadow-md",
+                "md:left-[5%] lg:top-20",
+            )}
+        >
             <Image
                 src={IMAGES.guide.meter}
                 alt="meter"
@@ -23,14 +31,14 @@ export const DestinationCard = ({
                 className="h-full w-auto"
             />
 
-            <div className="c-flex-between flex-col">
+            <div className="flex flex-col items-center justify-between">
                 <GuideInfoItem
-                    label="Destination"
+                    label="destination"
                     value={destination}
                     meta={duration}
                 />
 
-                <GuideInfoItem label="Start track" value={startTrack} nowrap />
+                <GuideInfoItem label="start track" value={startTrack} nowrap />
             </div>
         </div>
     )
