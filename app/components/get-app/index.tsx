@@ -4,7 +4,7 @@ import { GetAppWrapper } from "./get-app-wrapper"
 
 export const GetApp = () => {
     return (
-        <section className="c-flex-center w-full flex-col pb-[100px]">
+        <section className="flex w-full flex-col items-center justify-center pb-25">
             <GetAppWrapper>
                 <GetAppContent />
                 <GetAppVisual />
