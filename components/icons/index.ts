@@ -1,3 +1,5 @@
+export * from "./android-icon"
+export * from "./apple-icon"
 export * from "./calendar-icon"
 export * from "./location-icon"
 export * from "./map-icon"
