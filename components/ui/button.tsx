@@ -36,6 +36,8 @@ const buttonVariants = cva(
                 "white-green": "border-white bg-white text-green-600/87",
                 green: "border-green-600/87 bg-green-600/87 text-white",
                 "dark-green": "bg-olive-800 text-white hover:bg-black",
+                "dark-green-outline":
+                    "border-neutral-400 bg-olive-800 text-white",
             },
             size: {
                 default:
