@@ -3,6 +3,9 @@ export const IMAGES = {
         quote: "/camp/quote.svg",
         map: "/camp/folded-map.svg",
     },
+    features: {
+        phone: "/features/phone.png",
+    },
     getapp: {
         phones: "/get-app/phones.png",
         apple: "/get-app/apple.svg",

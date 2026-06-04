@@ -1,20 +1,33 @@
 import { FEATURES } from "@/constants/features"
-import type { Feature } from "@/types/feature"
+import { cn } from "@/lib/utils"
 import { FeaturesHeader } from "./features-header"
 import { FeaturesList } from "./features-list"
 import { FeaturesPhonePreview } from "./features-phone-preview"
 
 export const Features = () => {
     return (
-        <section className="c-flex-center c-bg-pattren-white flex-col overflow-hidden bg-center bg-no-repeat py-24">
-            <div className="c-max-container c-padding-container relative flex w-full justify-end">
-                <div className="flex flex-1 lg:min-h-[900px]">
+        <section
+            className={cn(
+                "py-24",
+                "flex flex-col items-center justify-center",
+                "c-bg-pattren-white bg-center bg-no-repeat",
+                "overflow-hidden",
+            )}
+        >
+            <div
+                className={cn(
+                    "relative mx-auto max-w-360 px-6",
+                    "flex w-full justify-end",
+                    "3xl:px-0 lg:px-20",
+                )}
+            >
+                <div className="flex flex-1 lg:min-h-225">
                     <FeaturesPhonePreview />
                 </div>
 
                 <div className="z-20 flex w-full flex-col lg:w-[60%]">
                     <FeaturesHeader />
-                    <FeaturesList features={FEATURES as Feature[]} />
+                    <FeaturesList features={FEATURES} />
                 </div>
             </div>
         </section>

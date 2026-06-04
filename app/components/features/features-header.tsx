@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { IMAGES } from '@/constants'
+import Image from "next/image"
+import { IMAGES } from "@/constants"
 
 export const FeaturesHeader = () => {
     return (
@@ -9,9 +9,12 @@ export const FeaturesHeader = () => {
                 alt="camp"
                 width={50}
                 height={50}
-                className="absolute top-[-28px] left-[-5px] w-10 lg:w-[50px]"
+                className="absolute -top-7 -left-1.25 w-10 lg:w-12.5"
             />
-            <h2 className="c-bold-40 lg:c-bold-64">Our Features</h2>
+
+            <h2 className="font-bold text-[40px] capitalize lg:text-[64px]">
+                our features
+            </h2>
         </div>
     )
 }

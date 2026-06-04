@@ -1,22 +1,23 @@
-import Image from 'next/image'
-import type { Feature } from '@/types/feature'
+import type { Feature } from "@/types/feature"
 
 interface FeatureCardProps {
     feature: Feature
 }
 
 export const FeatureCard = ({ feature }: FeatureCardProps) => {
-    const { title, icon, alt, description } = feature
+    const { title, icon: Icon, description } = feature
 
-    return (  
+    return (
         <li className="flex w-full flex-1 flex-col items-start">
-            <div className="rounded-full bg-green-50 p-4 lg:p-7">
-                <Image src={icon} alt={alt} width={28} height={28} />
+            <div className="rounded-full bg-green-600/87 p-4 lg:p-7">
+                <Icon className="text-white" />
             </div>
 
-            <h3 className="c-bold-20 lg:c-bold-32 mt-5 capitalize">{title}</h3>
+            <h3 className="mt-5 font-bold text-xl capitalize lg:text-[32px]">
+                {title}
+            </h3>
 
-            <p className="c-regular-16 text-gray-30 mt-5 bg-white/80 lg:mt-[30px] lg:bg-none">
+            <p className="mt-5 bg-white/80 text-neutral-500/94 lg:mt-7.5 lg:bg-none">
                 {description}
             </p>
         </li>

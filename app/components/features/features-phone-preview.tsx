@@ -1,17 +1,18 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image"
+import { IMAGES } from "@/constants"
+import { cn } from "@/lib/utils"
 
 export const FeaturesPhonePreview = () => {
     return (
         <Image
-            src="/phone.png"
+            src={IMAGES.features.phone}
             alt="phone"
             width={440}
             height={1000}
-            className={clsx(
-                'absolute top-[13%] z-10 max-w-[1500px] rotate-[15deg]',
-                'hidden',
-                '3xl:left-20 md:-left-16 lg:flex'
+            className={cn(
+                "absolute top-[13%] z-10 max-w-375 rotate-15",
+                "hidden",
+                "3xl:left-20 md:-left-16 lg:flex",
             )}
         />
     )
