@@ -1,2 +1,6 @@
+export * from "./calendar-icon"
+export * from "./location-icon"
+export * from "./map-icon"
 export * from "./play-icon"
 export * from "./star-icon"
+export * from "./tech-icon"

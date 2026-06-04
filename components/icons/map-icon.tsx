@@ -1,0 +1,54 @@
+import { forwardRef } from "react"
+import type { IconProps } from "@/types/icon"
+
+export const MapIcon = forwardRef<SVGSVGElement, IconProps>(
+    ({ size = 28, className, ...props }, ref) => (
+        <svg
+            ref={ref}
+            xmlns="http://www.w3.org/2000/svg"
+            width={size}
+            height={size}
+            viewBox="0 0 28 28"
+            fill="none"
+            className={className}
+            aria-hidden="true"
+            {...props}
+        >
+            <path
+                d="M25.6667 10.5V17.5C25.6667 20.4167 25.0833 22.4583 23.7767 23.7767L16.3333 16.3333L25.3517 7.315C25.5617 8.23667 25.6667 9.28666 25.6667 10.5Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M25.3517 7.31501L7.31499 25.3517C3.80332 24.5467 2.33334 22.12 2.33334 17.5V10.5C2.33334 4.66668 4.66667 2.33334 10.5 2.33334H17.5C22.12 2.33334 24.5467 3.80335 25.3517 7.31501Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M23.7767 23.7767C22.4583 25.0833 20.4167 25.6667 17.5 25.6667H10.5C9.28667 25.6667 8.23665 25.5617 7.31499 25.3517L16.3333 16.3333L23.7767 23.7767Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M7.27999 9.31C8.07332 5.89166 13.2067 5.89166 14 9.31C14.455 11.3167 13.195 13.02 12.0866 14.07C11.2816 14.84 10.01 14.84 9.19334 14.07C8.085 13.02 6.81332 11.3167 7.27999 9.31Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+            />
+            <path
+                d="M10.6104 10.15H10.6209"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    ),
+)
+
+MapIcon.displayName = "MapIcon"

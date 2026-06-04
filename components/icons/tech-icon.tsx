@@ -1,0 +1,42 @@
+import { forwardRef } from "react"
+import type { IconProps } from "@/types/icon"
+
+export const TechIcon = forwardRef<SVGSVGElement, IconProps>(
+    ({ size = 28, className, ...props }, ref) => (
+        <svg
+            ref={ref}
+            xmlns="http://www.w3.org/2000/svg"
+            width={size}
+            height={size}
+            viewBox="0 0 28 28"
+            fill="none"
+            className={className}
+            aria-hidden="true"
+            {...props}
+        >
+            <path
+                d="M14 24.9783H6.93C2.88167 24.9783 1.19 22.085 3.15 18.55L6.79 11.9933L10.22 5.83335C12.2967 2.08835 15.7033 2.08835 17.78 5.83335L21.21 12.005L24.85 18.5617C26.81 22.0967 25.1067 24.99 21.07 24.99H14V24.9783Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M25.0133 23.3333L14 15.6216L2.98666 23.3333"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M14 3.5V15.6217"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    ),
+)
+
+TechIcon.displayName = "TechIcon"

@@ -1,8 +1,7 @@
-import type { ImageProps } from 'next/image'
+import type { ElementType } from "react"
 
 export interface Feature {
     title: string
-    icon: ImageProps['src']
-    alt: string
+    icon: ElementType
     description: string
 }
