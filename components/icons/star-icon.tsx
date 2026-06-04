@@ -1,8 +1,5 @@
 import { forwardRef } from "react"
-
-interface IconProps extends React.SVGAttributes<SVGSVGElement> {
-    size?: number
-}
+import type { IconProps } from "@/types/icon"
 
 export const StarIcon = forwardRef<SVGSVGElement, IconProps>(
     ({ size = 24, className, ...props }, ref) => (
