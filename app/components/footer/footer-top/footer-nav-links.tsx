@@ -7,10 +7,12 @@ export const FooterNavLinks = () => {
         <>
             {FOOTER_LINKS.map((column) => (
                 <FooterColumn title={column.title} key={column.title}>
-                    <ul className="c-regular-14 flex flex-col gap-4 text-gray-30">
-                        {column.links.map((link) => (
-                            <li key={link}>
-                                <Link href="/">{link}</Link>
+                    <ul className="flex flex-col gap-4 text-neutral-500/94 text-sm">
+                        {column.items.map((label) => (
+                            <li key={label}>
+                                <Link href="/" className="capitalize">
+                                    {label}
+                                </Link>
                             </li>
                         ))}
                     </ul>

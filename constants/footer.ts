@@ -1,40 +1,48 @@
+import {
+    FacebookIcon,
+    InstagramIcon,
+    WordPressIcon,
+    XIcon,
+    YoutubeIcon,
+} from "@/components/icons/socials"
+
 export const FOOTER_LINKS = [
     {
-        title: "Learn More",
-        links: [
-            "About Quest Quil",
-            "Press Releases",
-            "Environment",
-            "Jobs",
-            "Privacy Policy",
-            "Contact Us",
+        title: "learn more",
+        items: [
+            "about quest quil",
+            "press releases",
+            "environment",
+            "jobs",
+            "privacy policy",
+            "contact us",
         ],
     },
     {
-        title: "Our Community",
-        links: [
-            "Climbing stonepeak",
-            "Hiking quest quil",
-            "Quest quil ridgeway",
+        title: "our community",
+        items: [
+            "climbing stonepeak",
+            "hiking quest quil",
+            "quest quil ridgeway",
         ],
     },
 ]
 
 export const FOOTER_CONTACT_INFO = {
-    title: "Contact Us",
-    links: [
+    title: "contact us",
+    items: [
         { label: "Admin Officer", value: "123-456-7890" },
         { label: "Email Officer", value: "quest.quil@contact.com" },
     ],
 }
 
 export const SOCIALS = {
-    title: "Social",
-    links: [
-        "socials/facebook.svg",
-        "socials/instagram.svg",
-        "socials/twitter.svg",
-        "socials/youtube.svg",
-        "socials/wordpress.svg",
+    title: "socials",
+    items: [
+        { label: "facebook", icon: FacebookIcon },
+        { label: "instagram", icon: InstagramIcon },
+        { label: "x", icon: XIcon },
+        { label: "youtube", icon: YoutubeIcon },
+        { label: "wordpress", icon: WordPressIcon },
     ],
 }
