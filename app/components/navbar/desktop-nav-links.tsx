@@ -13,7 +13,7 @@ export const DesktopNavLinks = () => (
                         "flex items-center justify-center",
                         "text-nowrap text-gray-800",
                         "transition-all",
-                        "hover:font-bold hover:text-green-600",
+                        "hover:font-bold hover:text-green-600/87",
                     )}
                 >
                     {link.label}

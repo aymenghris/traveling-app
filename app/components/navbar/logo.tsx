@@ -6,7 +6,7 @@ export const Logo = () => (
     <Link href="/">
         <Image
             src={IMAGES.shared.logo}
-            alt="Company Logo"
+            alt="app logo"
             width={250}
             height={29}
             priority

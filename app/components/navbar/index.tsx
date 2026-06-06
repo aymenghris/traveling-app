@@ -10,7 +10,7 @@ export const Navbar = () => {
     return (
         <nav
             className={cn(
-                "relative z-30 mx-auto max-w-[1440px] px-6 py-5",
+                "relative z-30 mx-auto max-w-360 px-6 py-5",
                 "flex items-center justify-between",
                 "3xl:px-0 lg:px-20",
             )}

@@ -10,7 +10,7 @@ export const MobileMenuLinks = () => {
                     <SheetClose asChild>
                         <Link
                             href={link.href}
-                            className="text-base text-gray-80 transition-all hover:font-bold hover:text-green-60"
+                            className="text-neutral-950/96 transition-all hover:font-bold hover:text-green-600/87"
                         >
                             {link.label}
                         </Link>
