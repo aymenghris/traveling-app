@@ -13,7 +13,7 @@ export const FooterContactInfo = () => {
                         className="flex gap-4 md:flex-col lg:flex-row"
                     >
                         <p className="whitespace-nowrap">{link.label}:</p>
-                        <p className="c-medium-14 whitespace-nowrap text-slate-900">
+                        <p className="whitespace-nowrap font-semibold text-slate-900 text-sm">
                             {link.value}
                         </p>
                     </Link>

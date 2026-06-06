@@ -10,7 +10,7 @@ export const GetAppWrapper = ({ children }: GetAppWrapperProps) => {
         <div
             className={cn(
                 "flex flex-col justify-between gap-32",
-                "c-max-container relative w-full px-6 py-12",
+                "relative mx-auto w-full max-w-360 px-6 py-12",
                 "text-white",
                 "bg-olive-800",
                 "c-bg-pattern-green bg-center bg-cover bg-no-repeat",
