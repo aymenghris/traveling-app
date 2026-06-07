@@ -10,7 +10,7 @@ export const Features = () => {
             className={cn(
                 "py-24",
                 "flex flex-col items-center justify-center",
-                "c-bg-pattren-white bg-center bg-no-repeat",
+                "bg-[url('/features/pattern-white.png')] bg-center bg-no-repeat",
                 "overflow-hidden",
             )}
         >

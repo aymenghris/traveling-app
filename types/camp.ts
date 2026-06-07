@@ -1,4 +1,6 @@
-export type CampBackgroundImageClassName = "c-bg-img-campfire" | "c-bg-img-tent"
+export type CampBackgroundImageClassName =
+    | "bg-[url('/camp/campfire.jpg')]"
+    | "bg-[url('/camp/tent.jpg')]"
 
 export interface CampDestination {
     backgroundImageClassName: CampBackgroundImageClassName
